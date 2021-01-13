@@ -62,6 +62,7 @@ const Button = styled.button`
         }
         @media ${device.mobileL} { 
           max-width: 220px;
+          font-size:16px;
         }
   `;
 
