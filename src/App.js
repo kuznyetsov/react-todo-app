@@ -1,7 +1,7 @@
 import './App.css';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt, faCheck, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import {device} from './media-styles/media-css';
 
 const Button = styled.button`
@@ -75,6 +75,9 @@ const Button = styled.button`
         border-radius: 10px;
         background-color: #4158D0;
         background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        &.checked {
+          opacity: 0.5;
+        }
         .iconBtn {
           margin-top: 0;
           color: #fff;
@@ -114,7 +117,11 @@ const App = (props) => {
               <TextP className="alreadyDo">Сделано </TextP>
               <div>
                 <FontAwesomeIcon icon={faTrashAlt} className='iconBtn deleteBtn' onClick={() => {props.deletePost(index)}} />
-                <FontAwesomeIcon icon={faCheck} className='iconBtn' onClick={() => {props.checkedPost(index)}} />
+                {
+                  p.checked  
+                  ? <FontAwesomeIcon icon={faThumbsUp} className='iconBtn' onClick={() => {props.checkedPost(index)}} />
+                  : <FontAwesomeIcon icon={faCheck} className='iconBtn' onClick={() => {props.checkedPost(index)}} />
+                }
               </div>
             </PostItem>
             );
