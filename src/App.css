@@ -1,24 +1,7 @@
 body {
   background: #e4f0f2;
 }
-.mainWindow {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 150px;
-  margin-bottom: 100px;
-  background: #fff;
-  -webkit-box-shadow: 0px 0px 24px -3px rgba(0,0,0,0.46); 
-  box-shadow: 0px 0px 24px -3px rgba(0,0,0,0.46);
-  padding: 50px;
-  border-radius: 10px;
-}
 
-.mainWindow p {
-  color: #fff;
-}
 
 .textBtn {
   position: relative;
@@ -26,79 +9,16 @@ body {
 }
 
 
-.mainWindow .addPost {
-  background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%);
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 100%;
-   position: absolute;
-   bottom: -20px;
-   left: 170px;
-   width: 50px;
-   height: 50px;
-   border: none;
-   display: block;
-   cursor: pointer;
-   outline: none;
-}
-.mainWindow .addPost:hover {
-  background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
-}
-
-.mainWindow textarea {
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 24px -3px rgba(0,0,0,0.46); 
-  box-shadow: 0px 0px 24px -3px rgba(0,0,0,0.46);
-  outline: none;
-  padding: 20px;
-  border: none;
-  resize: none;
-}
-
-.mainWindow textarea:focus {
-  box-shadow: 0px 0px 24px -3px #C850C0;
-  transition: .5s;
-}
-
-.mainWindow .postItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  padding: 12px;
-  border-radius: 10px;
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-}
-
-.postItem.checked {
-  opacity: .2;
-}
-
-.mainWindow .postItem p {
-  min-width: 230px;
-  margin: 0;
-}
-
-.mainWindow .postItem .iconBtn {
-  margin-top: 0;
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.mainWindow .postItem .iconBtn:hover {
-  opacity: 0.5;
-  transition: .5s;
-}
-
-.mainWindowModal {
+.postItem .alreadyDo {
   display: none;
 }
+
+.postItem.checked .alreadyDo {
+  display: block;
+}
+
+.postItem.checked .needDo {
+  display: none;
+}
+
+
