@@ -13,11 +13,18 @@ const todoReducer = (state = initialState, action) => {
     switch(action.type) {
         case ADD_POST: 
         let newPost = state.newPostText;
+        if (newPost !== '') {
             return {
                 ...state,
                 newPostText: '',
                 posts: [...state.posts, {message: newPost, checked: false}]
             }
+        } else {
+            return {
+                ...state,
+                newPostText: ''
+            }
+        }
         case UPDATE_NEW_POST: 
             return {
                 ...state,

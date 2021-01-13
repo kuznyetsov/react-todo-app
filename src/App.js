@@ -132,7 +132,7 @@ const App = (props) => {
 
   let updateNewPost = (e) => {
     let post = e.target.value;
-    props.updateNewPost(post);
+      props.updateNewPost(post);
   }
 
   return (
@@ -140,7 +140,7 @@ const App = (props) => {
         <MainWindow>
             <h1>Список дел</h1>
             <div className="textBtn">
-              <Textarea onChange={updateNewPost} value={newPostText} ></Textarea>
+              <Textarea onChange={updateNewPost} value={newPostText} placeholder="Что нужно сделать?" ></Textarea>
               <Button onClick={addPost} >+</Button>
             </div>
             {messagesElement}
